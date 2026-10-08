@@ -53,6 +53,8 @@
 	<link rel="stylesheet" href="css/superfish.css">
 
 	<link rel="stylesheet" href="css/style.css">
+	<!-- Leaflet CSS para OpenStreetMap -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
 
 	<!-- Modernizr JS -->
@@ -77,9 +79,9 @@
 					<h1 id="fh5co-logo"><a href="index.html"><span>Arky</span>proyectos SAC</a></h1>
 					<div class="informacion">
 						<p class="fh5co-social-icons text-right">
-							<a><span><b>+51970969372</b></span></a>
-							<a>arkyproyectosac@hotmail.com</a>
-							<a href="#"><i class="icon-whatsapp"></i></a>
+							<a href="tel:+51970969372"><span><b>+51970969372</b></span></a>
+							<a href="mailto:arkyproyectosac@hotmail.com">arkyproyectosac@hotmail.com</a>
+							<a href="https://api.whatsapp.com/send?phone=51970969372" target="_blank"><i class="icon-whatsapp"></i></a>
 							<a href="#"><i class="icon-twitter2"></i></a>
 							<a href="#"><i class="icon-facebook2"></i></a>
 							<a href="#"><i class="icon-google2"></i></a>
@@ -97,15 +99,15 @@
 									<a href="index.html">Inicio</a>
 								</li>								
 								<li>
-									<a href="index.html#servicios" class="fh5co-sub-ddown">Servicios</a>
-									 <!--<ul class="fh5co-sub-menu">
-									 	<li><a href="#">Consultoria</a></li>
-									 	<li><a href="#">Arquitectura y Diseño</a></li>									 	
-										<li><a href="#">Construcción</a></li>
-										<li><a href="#">Levantamientos Topograficos</a></li>
-										<li><a href="#">Interiorismo</a></li>
-										<li><a href="#">Alquiler de Equipo y Maquinaria</a></li>
-									</ul>-->
+									<a href="servicios.html" class="fh5co-sub-ddown">Servicios</a>
+									<ul class="fh5co-sub-menu">
+										<li><a href="servicios.html#consultoria">Consultoría</a></li>
+										<li><a href="servicios.html#arquitectura">Arquitectura y Diseño</a></li>									 	
+										<li><a href="servicios.html#estructuras">Diseño de Estructuras</a></li>
+										<li><a href="servicios.html#topografia">Levantamientos Topográficos</a></li>
+										<li><a href="servicios.html#impresiones">Impresiones y Ploteos</a></li>
+										<li><a href="servicios.html#maquinaria">Alquiler de Maquinaria y Equipos</a></li>
+									</ul>
 								</li>
 								<li><a href="nosotros.html">Nosotros</a></li>
 								<!--<li><a href="blog.html">Blog</a></li>-->
@@ -116,22 +118,18 @@
 				</div>
 			</header>			
 		</div>
-		<!--
 		<div class="fh5co-hero fh5co-hero-2">
-		
 			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover fh5co-cover_2 text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/blog-3.jpg);">
+			<div class="fh5co-cover fh5co-cover_2 text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/contact-hero.jpg);">
 				<div class="desc animate-box">
-					<h2>Contact Us</h2>
-					<span>Lovely Crafted by <a href="http://frehtml5.co/" target="_blank" class="fh5co-site-name">FREEHTML5.co</a></span>
+					<h2>Contáctanos</h2>
+					<span>Estamos listos para hacer realidad tu próximo proyecto</span>
 				</div>
 			</div>
-
 		</div>
-		-->		
 		<!-- end:header-top -->
 		
-		<div id="fh5co-contact" class="animate-box" style="padding-top: 200px;">
+		<div id="fh5co-contact" class="animate-box">
 			<div class="container">
 				<form method="post" id="frmcontacto">
 					<div class="row celda">
@@ -159,13 +157,14 @@
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea class="form-control" cols="30" rows="7" placeholder="Mensaje" mame="mensaje" id="mensaje" required></textarea>
+										<textarea class="form-control" cols="30" rows="7" placeholder="Mensaje" name="mensaje" id="mensaje" required></textarea>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
 										<input type="submit" value="Enviar" class="btn btn-primary">
 									</div>
+									<div id="form-status"></div>
 								</div>
 							</div>
 						</div>
@@ -183,23 +182,21 @@
 						<div class="col-md-6 text-center">
 							<div class="inner last">
 					            <p style="font-size: 20px;"><a><b>Contacto</b></a></p>
-					            <p>Puedes contactar a las oficinas de GCAQ  de Lunes a Viernes de 8.30 a 18:00 Hrs.<br>
-					               	<a><i class="fa-li fa fa-phone"></i> +51 (1) 440 8320</a><br>
-					               	<a><i class="fa-li fa fa-phone"></i> +51 (1) 440 7254</a><br>
-					               	<a><i class="fa-li fa fa-home"></i>Av. República De Colombia 671, P8 <br>San Isidro, Lima 27 <strong>Perú</strong></a> 
+					            <p>Atención de Lunes a Viernes de 8:30 a 18:00 Hrs.<br>
+					               	<a href="tel:+51970969372"><i class="icon-phone2"></i> +51 970 969 372</a><br>
+					               	<a href="mailto:arkyproyectosac@hotmail.com"><i class="icon-mail"></i> arkyproyectosac@hotmail.com</a><br>
+					               	<span><i class="icon-location-pin"></i> Mza. C Lote. 10 Asc. 1 De Mayo<br>Tacna, <strong>Perú</strong></span> 
 					            </p>
-					            
 					        </div>
 						</div>
-						<!-- col-md-offset-3 -->
 						<div class="col-md-6 text-center">
 							<p class="fh5co-social-icons">
-								<a href="#"><i class="icon-whatsapp"></i></a>
+								<a href="https://api.whatsapp.com/send?phone=51970969372" target="_blank"><i class="icon-whatsapp"></i></a>
 								<a href="#"><i class="icon-twitter2"></i></a>
 								<a href="#"><i class="icon-facebook2"></i></a>
 								<a href="#"><i class="icon-google2"></i></a>						
 							</p>
-							<p>Copyright &copy 2016 <a href="#">Arkyproyectos sac</a>. Todo los derechos reservados. <br>Realizado por <a href="cmprojects.com" target="_blank">CM projects</a></p>
+							<p>Copyright &copy; 2016 <a href="#">Arkyproyectos SAC</a>. Todos los derechos reservados. <br>Realizado por <a href="http://cmprojects.com" target="_blank">CM projects</a></p>
 						</div>
 					</div>
 				</div>
@@ -228,32 +225,70 @@
 	<!-- Superfish -->
 	<script src="js/hoverIntent.js"></script>
 	<script src="js/superfish.js"></script>
-	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-	<script src="js/google_map.js"></script>
+	<!-- OpenStreetMap con Leaflet -->
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
 
 	<script type="text/javascript">
-		//function enviar(){
-			var frm = $('#frmcontacto');
-	    
-		    frm.submit(function (ev) {
+		$(function () {
+			// Inicializar OpenStreetMap
+			var lat = -18.043010;
+			var lng = -70.251676;
+			var map = L.map('map', {
+				scrollWheelZoom: false
+			}).setView([lat, lng], 16);
 
-		    	ev.preventDefault();
-		        $.ajax({
-		            type: frm.attr('method'),
-		            url: 'email.php?mensaje=' + $('#mensaje').val(),
-		            data: frm.serialize(),
-		            success: function (data) {
-		                alert('ok');
-		            }
-		        });
+			L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				maxZoom: 19,
+				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
+			}).addTo(map);
 
-		        
-		    });	
-		//}
-		
+			var marker = L.marker([lat, lng]).addTo(map);
+			marker.bindPopup("<b>Arkyproyectos SAC</b><br>Mza. C Lote. 10 Asc. 1 De Mayo<br>Tacna, Perú").openPopup();
+
+			// Procesamiento del formulario 100% en JavaScript
+			var $frm = $('#frmcontacto');
+			var $status = $('#form-status');
+
+			$frm.on('submit', function (ev) {
+				ev.preventDefault();
+
+				var nombre = $.trim($frm.find('input[name="nombre"]').val());
+				var email = $.trim($frm.find('input[name="email"]').val());
+				var mensaje = $.trim($frm.find('textarea[name="mensaje"]').val());
+
+				if (!nombre || !email || !mensaje) {
+					$status.html('<div class="alert alert-warning" style="margin-top:15px;">Por favor, completa todos los campos requeridos.</div>');
+					return;
+				}
+
+				// Preparar mensaje para WhatsApp
+				var textoWhatsapp = "Hola Arkyproyectos SAC, mi nombre es *" + nombre + "* (" + email + "). Deseo realizar la siguiente consulta: " + mensaje;
+				var urlWhatsapp = "https://api.whatsapp.com/send?phone=51970969372&text=" + encodeURIComponent(textoWhatsapp);
+
+				// Preparar mensaje para correo electrónico
+				var asuntoMail = encodeURIComponent("Consulta Web - " + nombre);
+				var cuerpoMail = encodeURIComponent("Nombre: " + nombre + "\nCorreo: " + email + "\n\nMensaje:\n" + mensaje);
+				var urlMail = "mailto:arkyproyectosac@hotmail.com?subject=" + asuntoMail + "&body=" + cuerpoMail;
+
+				$status.html(
+					'<div class="alert alert-success" style="margin-top:15px;">' +
+						'<h4><i class="icon-check"></i> ¡Gracias, ' + $('<div>').text(nombre).html() + '!</h4>' +
+						'<p>Tu consulta ha sido generada exitosamente. Se abrirá WhatsApp para enviarla inmediatamente a nuestro equipo de atención.</p>' +
+						'<div style="margin-top:12px;">' +
+							'<a href="' + urlWhatsapp + '" target="_blank" class="btn btn-success" style="margin-right:8px;"><i class="icon-whatsapp"></i> Abrir WhatsApp</a>' +
+							'<a href="' + urlMail + '" class="btn btn-default"><i class="icon-mail"></i> Enviar por Correo</a>' +
+						'</div>' +
+					'</div>'
+				);
+
+				// Abrir WhatsApp en nueva pestaña
+				window.open(urlWhatsapp, '_blank');
+
+				$frm[0].reset();
+			});
+		});
 	</script>
 
 	</body>
