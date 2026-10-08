@@ -21,7 +21,6 @@ Sitio web corporativo de **Arkyproyectos SAC**, empresa especializada en ingenie
 - [Tecnologías Utilizadas](#-tecnologías-utilizadas)
 - [Estructura del Proyecto](#-estructura-del-proyecto)
 - [Despliegue y Ejecución Local](#-despliegue-y-ejecución-local)
-- [Información de Contacto](#-información-de-contacto)
 
 ---
 
@@ -137,16 +136,6 @@ Instalar la extensión **Live Server** y hacer clic en **"Go Live"** en la barra
 
 ---
 
-## 📞 Información de Contacto
-
-- **Empresa:** Arkyproyectos SAC
-- **Dirección:** Mza. C Lote. 10 Asc. 1 De Mayo, Tacna - Perú (A 2 cuadras antes de la Municipalidad Gregorio Albarracín Lanchipa)
-- **Horario:** Lunes a Viernes de 8:30 a 18:00 Hrs
-- **Teléfono / WhatsApp:** [+51 970 969 372](https://api.whatsapp.com/send?phone=51970969372)
-- **Correo Electrónico:** [arkyproyectosac@hotmail.com](mailto:arkyproyectosac@hotmail.com)
-- **Sitio Web Oficial:** [https://arkiproyectos.cmaquera.com/](https://arkiproyectos.cmaquera.com/)
-
----
 
 ### Derechos de Autor
 Copyright © 2016 - 2026 **Arkyproyectos SAC**. Todos los derechos reservados.
