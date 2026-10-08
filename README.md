@@ -5,7 +5,6 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
 [![Leaflet](https://img.shields.io/badge/Maps-OpenStreetMap%20%2F%20Leaflet-199900?style=flat-square&logo=leaflet&logoColor=white)](https://leafletjs.com/)
-[![WhatsApp](https://img.shields.io/badge/Contacto-WhatsApp-25D366?style=flat-square&logo=whatsapp&logoColor=white)](https://api.whatsapp.com/send?phone=51970969372)
 
 Sitio web corporativo de **Arkyproyectos SAC**, empresa especializada en ingeniería, arquitectura, diseño estructural y consultoría civil en Tacna, Perú.
 
