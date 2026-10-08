@@ -139,4 +139,4 @@ Instalar la extensión **Live Server** y hacer clic en **"Go Live"** en la barra
 
 ### Derechos de Autor
 Copyright © 2016 - 2026 **Arkyproyectos SAC**. Todos los derechos reservados.
-Realizado por [CM projects](http://cmprojects.com).
+Realizado por [CMaquera](http://cmaquera.com).
