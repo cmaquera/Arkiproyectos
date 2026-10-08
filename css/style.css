@@ -78,17 +78,29 @@ figure {
 .fh5co-cover,
 .fh5co-hero {
   position: relative;
-  height: 800px;
+  height: 650px;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover,
   .fh5co-hero {
-    height: 700px;
+    height: 440px;
+    overflow: hidden;
   }
 }
 .fh5co-cover.fh5co-hero-2,
-.fh5co-hero.fh5co-hero-2 {
-  height: 600px;
+.fh5co-hero.fh5co-hero-2,
+.fh5co-cover.fh5co-cover_2 {
+  height: 400px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-cover.fh5co-hero-2,
+  .fh5co-hero.fh5co-hero-2,
+  .fh5co-cover.fh5co-cover_2 {
+    height: 270px;
+    overflow: hidden;
+  }
 }
 .fh5co-cover.fh5co-hero-2 .fh5co-overlay,
 .fh5co-hero.fh5co-hero-2 .fh5co-overlay {
@@ -99,7 +111,7 @@ figure {
   bottom: 0;
   right: 0;
   z-index: 1;
-  background: rgba(31, 45, 58, 0.5);
+  background: rgba(31, 45, 58, 0.55);
 }
 
 .fh5co-overlay {
@@ -110,37 +122,31 @@ figure {
   bottom: 0;
   right: 0;
   z-index: 1;
-  background: rgba(31, 45, 58, 0.2);
+  background: rgba(31, 45, 58, 0.4);
 }
 
 .fh5co-cover {
   background-size: cover;
+  background-position: center center;
   position: relative;
 }
-@media screen and (max-width: 768px) {
-  .fh5co-cover {
-    heifght: inherit;
-    padding: 3em 0;
-  }
-}
 .fh5co-cover .btn {
-  padding: 1em 5em;
-  opacity: .9;
-}
-.fh5co-cover.fh5co-cover_2 {
-  height: 600px;
+  padding: 12px 35px;
+  opacity: .95;
 }
 @media screen and (max-width: 768px) {
-  .fh5co-cover.fh5co-cover_2 {
-    heifght: inherit;
-    padding: 3em 0;
+  .fh5co-cover .btn {
+    padding: 10px 25px;
+    font-size: 15px;
   }
 }
 .fh5co-cover .desc {
-  top: 50%;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   position: absolute;
   width: 100%;
-  /*margin-top: -80px;*/
   z-index: 2;
   color: #fff;
 }
@@ -148,25 +154,53 @@ figure {
   .fh5co-cover .desc {
     padding-left: 15px;
     padding-right: 15px;
-    margin-top: -80px;
+    top: 58%;
+    margin-top: 0;
+  }
+  .fh5co-cover.fh5co-hero-2 .desc,
+  .fh5co-hero.fh5co-hero-2 .desc {
+    top: auto;
+    bottom: 25px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
   }
 }
 .fh5co-cover .desc h2 {
   color: #fff;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 55px;
   margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover .desc h2 {
-    font-size: 40px;
+    font-size: 30px;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .fh5co-cover.fh5co-hero-2 .desc h2,
+  .fh5co-hero.fh5co-hero-2 .desc h2 {
+    font-size: 24px;
+    margin-bottom: 4px;
   }
 }
 .fh5co-cover .desc span {
   display: block;
-  margin-bottom: 30px;
-  font-size: 28px;
+  margin-bottom: 25px;
+  font-size: 24px;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-cover .desc span {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.35;
+  }
+  .fh5co-cover.fh5co-hero-2 .desc span,
+  .fh5co-hero.fh5co-hero-2 .desc span {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
 }
 .fh5co-cover .desc span a {
   color: #fff;
@@ -293,7 +327,7 @@ figure {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 100;
   background-color: #1f2d3a;
 }
 
@@ -305,20 +339,39 @@ figure {
 #fh5co-logo {
   position: relative;
   z-index: 2;
-  font-size: 28px;
+  font-size: 26px;
   text-transform: uppercase;
-  margin-top: 35px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   font-weight: 300;
   float: left;
+  letter-spacing: 0.5px;
 }
 #fh5co-logo span {
   font-weight: 700;
 }
 @media screen and (max-width: 768px) {
+  #fh5co-header-section {
+    padding: 12px 0 10px 0;
+    min-height: 62px;
+  }
+  #fh5co-header-section .container {
+    position: relative;
+  }
+  #fh5co-header-section .nav-header {
+    display: none;
+  }
   #fh5co-logo {
-    width: 100%;
-    float: none;
-    text-align: center;
+    width: auto;
+    max-width: calc(100% - 60px);
+    float: left;
+    text-align: left;
+    margin: 4px 0 4px 10px;
+    font-size: 19px;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 #fh5co-logo a {
@@ -888,11 +941,11 @@ figure {
   transition: 0.5s;
 }
 .fh5co-offcanvas #fh5co-page {
-  -moz-transform: translateX(-240px);
-  -webkit-transform: translateX(-240px);
-  -ms-transform: translateX(-240px);
-  -o-transform: translateX(-240px);
-  transform: translateX(-240px);
+  -moz-transform: translateX(-270px);
+  -webkit-transform: translateX(-270px);
+  -ms-transform: translateX(-270px);
+  -o-transform: translateX(-270px);
+  transform: translateX(-270px);
 }
 
 @media screen and (max-width: 768px) {
@@ -905,12 +958,13 @@ figure {
   position: absolute;
   top: 0;
   bottom: 0;
-  z-index: 99;
-  background: #222;
-  right: -240px;
-  width: 240px;
-  padding: 20px;
-  overflow-y: scroll !important;
+  z-index: 99999;
+  background: #17212b;
+  right: -270px;
+  width: 270px;
+  padding: 30px 18px;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
 }
 #offcanvas-menu ul {
   padding: 0;
@@ -918,26 +972,49 @@ figure {
 }
 #offcanvas-menu ul li {
   padding: 0;
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0;
   list-style: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 6px;
+}
+#offcanvas-menu ul li:last-child {
+  border-bottom: none;
 }
 #offcanvas-menu ul li a {
-  font-size: 25px;
-  color: rgba(255, 255, 255, 0.4);
-  font-weight: 200;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  display: block;
+  text-decoration: none;
+  padding: 4px 0;
 }
 #offcanvas-menu ul li a:hover {
   color: #FCC72C;
 }
-#offcanvas-menu ul li > .fh5co-sub-menu {
-  margin-top: 9px;
-  padding-left: 20px;
-}
 #offcanvas-menu ul li.active > a {
   color: #FCC72C;
+  font-weight: 600;
 }
-#offcanvas-menu ul .fh5co-sub-menu {
+#offcanvas-menu ul li > .fh5co-sub-menu {
+  margin-top: 4px;
+  padding-left: 12px;
   display: block !important;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-top: 4px;
+}
+#offcanvas-menu ul li > .fh5co-sub-menu li {
+  margin-bottom: 4px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+#offcanvas-menu ul li > .fh5co-sub-menu li a {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  padding: 2px 0;
+}
+#offcanvas-menu ul li > .fh5co-sub-menu li a:hover {
+  color: #FCC72C;
 }
 
 .fh5co-nav-toggle {
@@ -1036,17 +1113,20 @@ figure {
   top: 0px;
   right: 0px;
   z-index: 9999;
-  display: block;
-  margin: 0 auto;
   display: none;
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav-toggle {
-    display: block;
-    top: 0px;
-    margin-top: 2em;
-    margin-right: 2em;
+    display: block !important;
+    top: 50% !important;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 15px !important;
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    z-index: 10000;
   }
 }
 
@@ -1144,40 +1224,47 @@ figure {
 
 
 
-/*my changes*/
+/* Optimizaciones responsivas y video */
 
 @media screen and (max-width: 768px) {
-  .informacion{
+  .informacion {
     display: none;
+  }
+  #map {
+    height: 320px !important;
+  }
+  #fh5co-services .fh5co-icon {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .fh5co-testimonial {
+    padding: 2em 15px !important;
+  }
+  .fh5co-testimonial blockquote p {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
   }
 }
 
-
-.one{
-  width: 90%;
-  height: 30vw;
-  overflow: hidden;
-  border: 15px solid red;
-  margin-bottom: 40px;
-  position: relative;
+.video-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  object-fit: cover;
+  object-position: center;
 }
 
-
-.video-background { /* class name used in javascript too */
-    width: 100%; /* width needs to be set to 100% */
-    height: 100%; /* height needs to be set to 100% */
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-}
-
-.celda{
+.celda {
   margin-top: 40px;
 }
 
 @media screen and (max-width: 768px) {
-  .celda{
-    margin-top: 0px;
+  .celda {
+    margin-top: 10px;
   }
 }
