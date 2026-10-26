@@ -14,11 +14,11 @@
   <meta content="Arquitectura, diseño estructural, consultoría y topografía en Tacna. Cuéntanos tu proyecto y consulta con Arkyproyectos SAC." property="og:description"/>
   <meta content="Arkyproyectos SAC" property="og:site_name"/>
   <meta content="https://arkiproyectos.cmaquera.com/" property="og:url"/>
-  <meta content="https://arkiproyectos.cmaquera.com/images/hero-bg.jpg" property="og:image"/>
+  <meta content="https://arkiproyectos.cmaquera.com/images/hero-bg.jpg?v=20261026.1" property="og:image"/>
   <meta content="summary_large_image" name="twitter:card"/>
   <meta content="Arquitectura e ingeniería en Tacna | Arkyproyectos SAC" name="twitter:title"/>
   <meta content="Arquitectura, diseño estructural, consultoría y topografía en Tacna. Cuéntanos tu proyecto y consulta con Arkyproyectos SAC." name="twitter:description"/>
-  <meta content="https://arkiproyectos.cmaquera.com/images/hero-bg.jpg" name="twitter:image"/>
+  <meta content="https://arkiproyectos.cmaquera.com/images/hero-bg.jpg?v=20261026.1" name="twitter:image"/>
   <link href="https://arkiproyectos.cmaquera.com/" rel="canonical"/>
   <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
   <link href="favicon.ico" rel="alternate icon"/>
@@ -26,7 +26,7 @@
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
   <link href="css/bootstrap.css" rel="stylesheet"/>
-  <link href="css/style.css?v=20261026.4" rel="stylesheet"/>
+  <link href="css/style.css?v=20261026.5" rel="stylesheet"/>
  </head>
  <body>
   <a class="skip-link" href="#contenido">
@@ -75,7 +75,11 @@
   </header>
   <main id="contenido" tabindex="-1">
    <section aria-labelledby="page-title" class="hero hero-home hero-index">
-    <img alt="" class="hero-image" fetchpriority="high" src="images/hero-bg.jpg"/>
+    <picture>
+     <source media="(max-width: 640px)" sizes="100vw" srcset="images/optimized/hero-bg-mobile-480.webp?v=20261026.1 480w, images/optimized/hero-bg-mobile-864.webp?v=20261026.1 864w" type="image/webp"/>
+     <source sizes="100vw" srcset="images/optimized/hero-bg-1440.webp 1440w, images/optimized/hero-bg-1920.webp 1920w, images/optimized/hero-bg-2752.webp 2752w" type="image/webp"/>
+     <img alt="" class="hero-image" decoding="async" fetchpriority="high" height="1536" src="images/hero-bg.jpg?v=20261026.1" width="2752"/>
+    </picture>
     <div class="hero-shade">
     </div>
     <div class="container hero-content">
@@ -108,7 +112,10 @@
    <section class="section intro">
     <div class="container intro-grid">
      <div class="intro-image reveal">
-      <img alt="Interior con sofá, vegetación y mobiliario de líneas simples" height="800" loading="lazy" src="images/architecture-modern.jpg" width="1200"/>
+      <picture>
+       <source sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1280px) 50vw, 640px" srcset="images/optimized/architecture-modern-480.webp 480w, images/optimized/architecture-modern-800.webp 800w, images/optimized/architecture-modern-1200.webp 1200w" type="image/webp"/>
+       <img alt="Interior con sofá, vegetación y mobiliario de líneas simples" decoding="async" height="801" loading="lazy" src="images/architecture-modern.jpg" width="1200"/>
+      </picture>
       <span>
        Espacios para habitar. Diseño para vivir.
       </span>
@@ -309,7 +316,10 @@
      </div>
      <div class="reference-grid">
       <figure class="reference-image reveal">
-       <img alt="Profesional dibujando una planta arquitectónica sobre papel" height="675" loading="lazy" src="images/about-image.jpg" width="1200"/>
+       <picture>
+        <source sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1280px) 50vw, 640px" srcset="images/optimized/about-image-480.webp 480w, images/optimized/about-image-800.webp 800w, images/optimized/about-image-1200.webp 1200w" type="image/webp"/>
+        <img alt="Profesional dibujando una planta arquitectónica sobre papel" decoding="async" height="675" loading="lazy" src="images/about-image.jpg" width="1200"/>
+       </picture>
        <figcaption>
         <span class="reference-index">
          01 / Planificación
@@ -323,7 +333,10 @@
        </figcaption>
       </figure>
       <figure class="reference-image reveal">
-       <img alt="Vista hacia arriba de fachadas y estructuras de edificios" height="800" loading="lazy" src="images/services-hero.jpg" width="1200"/>
+       <picture>
+        <source sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1280px) 50vw, 640px" srcset="images/optimized/services-hero-480.webp 480w, images/optimized/services-hero-800.webp 800w, images/optimized/services-hero-1200.webp 1200w" type="image/webp"/>
+        <img alt="Vista hacia arriba de fachadas y estructuras de edificios" decoding="async" height="800" loading="lazy" src="images/services-hero.jpg" width="1200"/>
+       </picture>
        <figcaption>
         <span class="reference-index">
          02 / Estructura

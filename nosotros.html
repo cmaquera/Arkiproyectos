@@ -26,7 +26,7 @@
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
   <link href="css/bootstrap.css" rel="stylesheet"/>
-  <link href="css/style.css?v=20261026.4" rel="stylesheet"/>
+  <link href="css/style.css?v=20261026.5" rel="stylesheet"/>
  </head>
  <body>
   <a class="skip-link" href="#contenido">
@@ -75,7 +75,10 @@
   </header>
   <main id="contenido" tabindex="-1">
    <section aria-labelledby="page-title" class="hero hero-inner hero-nosotros">
-    <img alt="" class="hero-image" fetchpriority="high" src="images/about-hero.jpg"/>
+    <picture>
+     <source sizes="(max-width: 640px) 800px, 100vw" srcset="images/optimized/about-hero-480.webp 480w, images/optimized/about-hero-800.webp 800w, images/optimized/about-hero-1200.webp 1200w" type="image/webp"/>
+     <img alt="" class="hero-image" decoding="async" fetchpriority="high" height="795" src="images/about-hero.jpg" width="1200"/>
+    </picture>
     <div class="hero-shade">
     </div>
     <div class="container hero-content">
@@ -131,7 +134,10 @@
      <div class="row row-bottom-padded-md">
       <div class="col-md-12 reveal">
        <figure>
-        <img alt="Profesional desarrollando un diseño arquitectónico" class="img-responsive" src="images/about-image.jpg"/>
+        <picture>
+         <source sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1280px) calc(100vw - 96px), 1184px" srcset="images/optimized/about-image-480.webp 480w, images/optimized/about-image-800.webp 800w, images/optimized/about-image-1200.webp 1200w" type="image/webp"/>
+         <img alt="Profesional desarrollando un diseño arquitectónico" class="img-responsive" decoding="async" height="675" loading="lazy" src="images/about-image.jpg" width="1200"/>
+        </picture>
        </figure>
       </div>
      </div>

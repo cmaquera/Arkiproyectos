@@ -26,7 +26,7 @@
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
   <link href="css/bootstrap.css" rel="stylesheet"/>
-  <link href="css/style.css?v=20261026.4" rel="stylesheet"/>
+  <link href="css/style.css?v=20261026.5" rel="stylesheet"/>
   <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
  </head>
  <body>
@@ -76,7 +76,10 @@
   </header>
   <main id="contenido" tabindex="-1">
    <section aria-labelledby="page-title" class="hero hero-inner hero-contacto">
-    <img alt="" class="hero-image" fetchpriority="high" src="images/contact-hero.jpg"/>
+    <picture>
+     <source sizes="(max-width: 640px) 800px, 100vw" srcset="images/optimized/contact-hero-480.webp 480w, images/optimized/contact-hero-800.webp 800w, images/optimized/contact-hero-1200.webp 1200w" type="image/webp"/>
+     <img alt="" class="hero-image" decoding="async" fetchpriority="high" height="801" src="images/contact-hero.jpg" width="1200"/>
+    </picture>
     <div class="hero-shade">
     </div>
     <div class="container hero-content">

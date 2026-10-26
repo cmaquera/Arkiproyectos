@@ -90,6 +90,27 @@ Abre `http://127.0.0.1:8080/`. No requiere compilación ni backend.
 
 `js/main.js` y `js/contact.js` usan JavaScript nativo. Las librerías antiguas permanecen en el repositorio, pero ya no se cargan. Los archivos Sass heredados tampoco generan la hoja de estilos actual.
 
+## Fotografías optimizadas
+
+Las fotografías visibles usan `<picture>` con WebP y alternativas JPEG. `srcset` y `sizes` permiten elegir un tamaño adecuado a la pantalla. Las imágenes fuera de la portada cargan de forma diferida; los fondos principales mantienen prioridad alta. Las ilustraciones técnicas siguen en SVG.
+
+El fondo de Inicio se preparó desde el original de 2752 × 1536 píxeles, sin ampliar la imagen:
+
+| Variante del fondo | Ancho | Peso aproximado |
+| --- | --- | --- |
+| Móvil | 480 / 864 px | 62 / 133 KB |
+| Escritorio | 1440 / 1920 / 2752 px | 126 / 193 / 318 KB |
+
+El navegador descarga la variante que selecciona, no todas. El recorte móvil conserva el punto de atención del fondo. El JPEG de respaldo también sirve para las vistas previas al compartir enlaces. El PNG original de 6,16 MB no se incluye como recurso de la web.
+
+Los archivos preparados se encuentran en `images/optimized`. Para regenerarlos con Pillow y soporte WebP:
+
+```powershell
+python scripts/optimize-images.py --hero-source "C:\ruta\a\la\imagen-original.png"
+```
+
+El original debe medir al menos 2752 × 1536 píxeles. El script no modifica las demás fotografías JPEG de origen ni las capturas históricas de la comparación.
+
 ## Formulario
 
 El formulario valida nombre, correo y mensaje. Al continuar prepara un enlace a WhatsApp con la consulta. El visitante confirma el envío en WhatsApp; la web no confirma la entrega del mensaje.
