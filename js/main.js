@@ -1,147 +1,69 @@
-;(function () {
-	
-	'use strict';
-
-
-
-	// iPad and iPod detection	
-	var isiPad = function(){
-		return (navigator.platform.indexOf("iPad") != -1);
-	};
-
-	var isiPhone = function(){
-	    return (
-			(navigator.platform.indexOf("iPhone") != -1) || 
-			(navigator.platform.indexOf("iPod") != -1)
-	    );
-	};
-
-	// Main Menu Superfish
-	var mainMenu = function() {
-
-		$('#fh5co-primary-menu').superfish({
-			delay: 0,
-			animation: {
-				opacity: 'show'
-			},
-			speed: 'fast',
-			cssArrows: true,
-			disableHI: true
-		});
-
-	};
-
-	// Parallax
-	var parallax = function() {
-		$(window).stellar();
-	};
-
-
-	// Offcanvas and cloning of the main menu
-	var offcanvas = function() {
-
-		var $clone = $('#fh5co-menu-wrap').clone();
-		$clone.attr({
-			'id' : 'offcanvas-menu'
-		});
-		$clone.find('> ul').attr({
-			'class' : '',
-			'id' : ''
-		});
-
-		$('#fh5co-page').prepend($clone);
-
-		// click the burger
-		$('.js-fh5co-nav-toggle').on('click', function(e){
-			e.preventDefault();
-			if ( $('body').hasClass('fh5co-offcanvas') ) {
-				$('body').removeClass('fh5co-offcanvas');
-				$('.js-fh5co-nav-toggle').removeClass('active');
-			} else {
-				$('body').addClass('fh5co-offcanvas');
-				$('.js-fh5co-nav-toggle').addClass('active');
-			}
-		});
-
-		$('#offcanvas-menu').css('height', $(window).height());
-
-		$(window).resize(function(){
-			var w = $(window);
-
-			$('#offcanvas-menu').css('height', w.height());
-
-			if ( w.width() > 769 ) {
-				if ( $('body').hasClass('fh5co-offcanvas') ) {
-					$('body').removeClass('fh5co-offcanvas');
-					$('.js-fh5co-nav-toggle').removeClass('active');
-				}
-			}
-
-		});	
-
-		// Cerrar al hacer clic en un enlace del menú
-		$(document).on('click', '#offcanvas-menu a', function() {
-			$('body').removeClass('fh5co-offcanvas');
-			$('.js-fh5co-nav-toggle').removeClass('active');
-		});
-
-	}
-
-	
-
-	// Click outside of the Mobile Menu
-	var mobileMenuOutsideClick = function() {
-		$(document).click(function (e) {
-	    var container = $("#offcanvas-menu, .js-fh5co-nav-toggle");
-	    if (!container.is(e.target) && container.has(e.target).length === 0) {
-	      if ( $('body').hasClass('fh5co-offcanvas') ) {
-				$('body').removeClass('fh5co-offcanvas');
-				$('.js-fh5co-nav-toggle').removeClass('active');
-			}
-	    }
-		});
-	};
-
-
-	// Animations
-
-	var contentWayPoint = function() {
-		var i = 0;
-		$('.animate-box').waypoint( function( direction ) {
-
-			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-				
-				i++;
-
-				$(this.element).addClass('item-animate');
-				setTimeout(function(){
-
-					$('body .animate-box.item-animate').each(function(k){
-						var el = $(this);
-						setTimeout( function () {
-							el.addClass('fadeInUp animated');
-							el.removeClass('item-animate');
-						},  k * 200, 'easeInOutExpo' );
-					});
-					
-				}, 100);
-				
-			}
-
-		} , { offset: '85%' } );
-	};
-	
-
-	// Document on load.
-	$(function(){
-		mainMenu();
-		parallax();
-		offcanvas();
-		mobileMenuOutsideClick();
-		contentWayPoint();
-		
-
-	});
-
-
-}());
+(() => {
+  'use strict';
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('site-nav');
+  const main = document.querySelector('main');
+  const footer = document.querySelector('footer');
+  const brand = document.querySelector('.brand');
+  const mobile = matchMedia('(max-width: 900px)');
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const setMenu = (open, returnFocus = false) => {
+    document.body.classList.toggle('menu-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    main.inert = open;
+    footer.inert = open;
+    brand.inert = open;
+    if (open) nav.querySelector('a').focus();
+    else if (returnFocus) toggle.focus();
+  };
+  toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+  nav.addEventListener('click', event => {
+    if (event.target.closest('a') && mobile.matches) setMenu(false, true);
+  });
+  document.addEventListener('keydown', event => {
+    if (toggle.getAttribute('aria-expanded') !== 'true') return;
+    if (event.key === 'Escape') { event.preventDefault(); setMenu(false, true); }
+    if (event.key === 'Tab') {
+      const links = [...nav.querySelectorAll('a')];
+      const first = toggle;
+      const last = links[links.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    }
+  });
+  mobile.addEventListener('change', () => setMenu(false));
+  document.documentElement.classList.add('nav-ready');
+  if ('IntersectionObserver' in window && !reduceMotion.matches) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.documentElement.classList.add('motion-ready');
+    const statement = document.querySelector('.word-reveal');
+    if (statement) {
+      const fragment = document.createDocumentFragment();
+      statement.childNodes.forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE) {
+          node.textContent.split(/(\s+)/).forEach(word => {
+            if (!word.trim()) fragment.append(document.createTextNode(word));
+            else { const span = document.createElement('span'); span.textContent = word; fragment.append(span); }
+          });
+        } else fragment.append(node.cloneNode(true));
+      });
+      statement.replaceChildren(fragment);
+      statement.classList.add('is-ready');
+      const words = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('is-seen'); words.unobserve(entry.target); }
+        });
+      }, { rootMargin: '0px 0px -20% 0px', threshold: 1 });
+      statement.querySelectorAll('span').forEach(span => words.observe(span));
+    }
+  }
+})();

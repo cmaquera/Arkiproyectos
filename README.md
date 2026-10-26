@@ -1,142 +1,116 @@
 # Arkyproyectos SAC
 
-[![Sitio Web Oficial](https://img.shields.io/badge/Sitio%20Web-arkiproyectos.cmaquera.com-brightgreen?style=flat-square&logo=google-chrome)](https://arkiproyectos.cmaquera.com/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
-[![Leaflet](https://img.shields.io/badge/Maps-OpenStreetMap%20%2F%20Leaflet-199900?style=flat-square&logo=leaflet&logoColor=white)](https://leafletjs.com/)
+Sitio corporativo estático de arquitectura, ingeniería, construcción y consultoría en Tacna, Perú.
 
-Sitio web corporativo de **Arkyproyectos SAC**, empresa especializada en ingeniería, arquitectura, diseño estructural y consultoría civil en Tacna, Perú.
+[Sitio de producción](https://arkiproyectos.cmaquera.com/)
 
-🔗 **Enlace del proyecto en producción:** [https://arkiproyectos.cmaquera.com/](https://arkiproyectos.cmaquera.com/)
+## Comparación visual: antes y después
 
----
+El sitio mantiene únicamente la versión actual. La versión anterior se muestra aquí mediante capturas, sin añadir una segunda web ni un comparador al sitio.
 
-## 📌 Tabla de Contenidos
+- **Antes:** estado guardado en el commit `7a952a9`, previo al rediseño.
+- **Después:** versión actual con la corrección de columnas, ilustraciones técnicas, referencias visuales y preguntas reorganizadas.
+- **Capturas:** navegador con viewport de 1280 × 900 píxeles. Las imágenes completas incluyen todo el recorrido de cada página; sus alturas varían porque cambió la composición.
 
-- [Descripción General](#-descripción-general)
-- [Páginas del Sitio](#-páginas-del-sitio)
-- [Servicios Ofrecidos](#-servicios-ofrecidos)
-- [Características y Optimizaciones](#-características-y-optimizaciones)
-- [Tecnologías Utilizadas](#-tecnologías-utilizadas)
-- [Estructura del Proyecto](#-estructura-del-proyecto)
-- [Despliegue y Ejecución Local](#-despliegue-y-ejecución-local)
+### Vista rápida de Inicio
 
----
+| Antes | Después |
+| --- | --- |
+| [![Portada de Inicio antes del rediseño](docs/comparacion/inicio-portada-antes.jpg)](docs/comparacion/index-antes.jpg) | [![Portada de Inicio con el diseño actual](docs/comparacion/inicio-portada-despues.jpg)](docs/comparacion/index-despues.jpg) |
 
-## 🏢 Descripción General
+### Páginas completas
 
-**Arkyproyectos SAC** ofrece soluciones integrales en el sector de la construcción, desarrollo de proyectos civiles y consultoría desde el año 2011. El portal web presenta sus servicios, experiencia, trayectoria y canales directos de cotización y atención al cliente.
+Despliega cada página para comparar ambas capturas lado a lado. Pulsa una imagen para verla a tamaño completo.
 
----
+<details>
+<summary>Inicio: antes y después</summary>
 
-## 📄 Páginas del Sitio
+| Antes | Después |
+| --- | --- |
+| [![Inicio antes del rediseño](docs/comparacion/index-antes.jpg)](docs/comparacion/index-antes.jpg) | [![Inicio en la versión actual](docs/comparacion/index-despues.jpg)](docs/comparacion/index-despues.jpg) |
 
-| Archivo | Sección | Descripción |
-|---|---|---|
-| [`index.html`](index.html) | **Inicio** | Portada con video de fondo responsivo en alta definición, llamada a la acción, resumen de servicios y testimonios. |
-| [`servicios.html`](servicios.html) | **Servicios** | Catálogo técnico de las especialidades y soluciones profesionales ofrecidas. |
-| [`nosotros.html`](nosotros.html) | **Nosotros** | Misión, visión, trayectoria empresarial y valores de puntualidad y calidad. |
-| [`contacto.html`](contacto.html) | **Contacto** | Formulario de consulta asistido por WhatsApp, datos de contacto y mapa interactivo con OpenStreetMap. |
+</details>
 
----
+<details>
+<summary>Servicios: antes y después</summary>
 
-## 🛠️ Servicios Ofrecidos
+| Antes | Después |
+| --- | --- |
+| [![Servicios antes del rediseño](docs/comparacion/servicios-antes.jpg)](docs/comparacion/servicios-antes.jpg) | [![Servicios en la versión actual](docs/comparacion/servicios-despues.jpg)](docs/comparacion/servicios-despues.jpg) |
 
-1. **Consultoría:** Asesoría integral y especializada para la planificación y gestión de proyectos civiles y edificaciones.
-2. **Arquitectura y Diseño:** Elaboración de planos arquitectónicos, modelado espacial, estética funcional y diseño de interiores/exteriores.
-3. **Diseño de Estructuras:** Cálculos sismorresistentes y diseño estructural en concreto armado y acero, bajo normativa técnica peruana.
-4. **Levantamientos Topográficos:** Mediciones de precisión, curvas de nivel y georreferenciación con instrumentación topográfica moderna.
-5. **Impresiones y Ploteos:** Impresión y ploteo de planos técnicos en alta calidad en diversos formatos y escalas.
-6. **Alquiler de Maquinaria y Equipos:** Alquiler de maquinaria pesada y equipos especializados para obras civiles.
+</details>
 
----
+<details>
+<summary>Nosotros: antes y después</summary>
 
-## 🚀 Características y Optimizaciones
+| Antes | Después |
+| --- | --- |
+| [![Nosotros antes del rediseño](docs/comparacion/nosotros-antes.jpg)](docs/comparacion/nosotros-antes.jpg) | [![Nosotros en la versión actual](docs/comparacion/nosotros-despues.jpg)](docs/comparacion/nosotros-despues.jpg) |
 
-- **100% Client-Side (Sin dependencia de backend PHP):**
-  - El formulario de contacto se procesa directamente en el navegador con JavaScript moderno.
-  - Genera automáticamente un mensaje estructurado y abre una conversación directa en **WhatsApp** (`+51 970 969 372`), incluyendo además un botón de respaldo para envío por cliente de correo electrónico (`mailto:`).
-- **Mapa Interactivo con OpenStreetMap y Leaflet:**
-  - Se sustituyó la dependencia de scripts de Google Maps por **Leaflet.js + OpenStreetMap**, garantizando carga rápida, sin necesidad de API keys ni costos de consumo, con marcador y popup en la sede de Tacna.
-- **Diseño 100% Responsive:**
-  - Optimizado para pantallas de escritorio, tablets y dispositivos móviles (incluyendo viewports estrechos de 360px a 414px).
-  - Menú lateral deslizante (*offcanvas drawer*) con z-index corregido, aislamiento de contexto de apilamiento y animación fluida del botón de hamburguesa a cruz (`X`).
-  - Video hero en portada implementado con `object-fit: cover` nativo y altura adaptada en móviles para evitar superposiciones de texto.
-- **Rendimiento y Accesibilidad:**
-  - Carga diferida de scripts, tipografía optimizada y diseño con alto contraste.
+</details>
 
----
+<details>
+<summary>Contacto: antes y después</summary>
 
-## 💻 Tecnologías Utilizadas
+| Antes | Después |
+| --- | --- |
+| [![Contacto antes del rediseño](docs/comparacion/contacto-antes.jpg)](docs/comparacion/contacto-antes.jpg) | [![Contacto en la versión actual](docs/comparacion/contacto-despues.jpg)](docs/comparacion/contacto-despues.jpg) |
 
-- **Lenguajes:** HTML5, CSS3, JavaScript (ES6+).
-- **Frameworks & Librerías CSS:**
-  - [Bootstrap 3 (Grid & Utilities)](https://getbootstrap.com/)
-  - [Animate.css](https://animate.style/)
-  - [Icomoon (Iconografía vectorial)](https://icomoon.io/)
-- **Librerías JavaScript:**
-  - [jQuery 2.x](https://jquery.com/)
-  - [Leaflet 1.9.4](https://leafletjs.com/) (OpenStreetMap)
-  - [Superfish](https://github.com/joeldbirch/superfish) (Menú multinivel)
-  - [Waypoints](http://imakewebthings.com/waypoints/) & [Stellar.js](https://markdalgleish.com/projects/stellar.js/) (Efectos de desplazamiento y animaciones)
-- **Multimedia:** Video HD en formato MP4 e imágenes de arquitectura e ingeniería en alta resolución.
+</details>
 
----
+## Páginas
 
-## 📁 Estructura del Proyecto
+- `index.html`: propuesta de valor, seis especialidades, proceso de consulta y preguntas frecuentes.
+- `servicios.html`: catálogo técnico con enlaces directos a cada especialidad.
+- `nosotros.html`: trayectoria, misión, visión y valores.
+- `contacto.html`: formulario asistido por WhatsApp, alternativa de correo y mapa de ubicación.
+- `privacidad.html`: funcionamiento del formulario y recursos de terceros.
+- `informacion.html`: alcance de la información publicada y canales de contacto.
+- `404.html`: página de error con navegación de regreso.
 
-```text
-Arkiproyectos/
-├── css/
-│   ├── animate.css          # Animaciones CSS
-│   ├── bootstrap.css        # Framework de rejilla y utilidades
-│   ├── icomoon.css          # Iconos vectoriales
-│   ├── style.css            # Estilos personalizados y reglas responsive
-│   └── superfish.css        # Estilos del menú de navegación
-├── fonts/                   # Fuentes de iconos (Icomoon)
-├── images/                  # Imágenes del sitio y video de fondo
-│   ├── hero-video.mp4       # Video responsivo de la portada
-│   ├── contact-hero.jpg     # Hero de contacto
-│   ├── services-hero.jpg    # Hero de servicios
-│   ├── about-hero.jpg       # Hero de nosotros
-│   └── ...
-├── js/
-│   ├── bootstrap.min.js     # Componentes de Bootstrap
-│   ├── jquery.min.js        # Librería jQuery
-│   ├── main.js              # Lógica del menú offcanvas y animaciones
-│   └── ...
-├── contacto.html            # Página de contacto y ubicación
-├── index.html               # Página de inicio
-├── nosotros.html            # Página de historia y nosotros
-├── servicios.html           # Página de catálogo de servicios
-└── README.md                # Documentación del proyecto
+## Desarrollo local
+
+```powershell
+python -m http.server 8080 --bind 127.0.0.1
 ```
 
----
+Abre `http://127.0.0.1:8080/`. No requiere compilación ni backend.
 
-## 🔧 Despliegue y Ejecución Local
+## Diseño y accesibilidad
 
-Al tratarse de una aplicación web estática, no requiere servidor de base de datos ni intérprete PHP. Puede ejecutarse con cualquier servidor web local:
+- Manrope con pesos 400, 500, 600 y 700; superficies carbón y acento amarillo.
+- Estilos compartidos en `css/style.css`; Bootstrap se conserva solo para la rejilla del contenido existente.
+- Navegación móvil con botón accesible, aislamiento del contenido, recorrido de foco y cierre con Escape.
+- Enlace para saltar al contenido, etiquetas de formulario, errores asociados y estados de foco visibles.
+- Animaciones mediante IntersectionObserver, con contenido visible si no se ejecuta JavaScript y adaptación a `prefers-reduced-motion`.
+- Portada con imagen estática: evita la descarga automática del video de fondo anterior.
+- Favicon SVG, metadatos sociales y enlaces canónicos por página.
+- Ilustraciones técnicas SVG en `images/technical`, referencias fotográficas identificadas como ilustrativas y preguntas frecuentes en dos columnas en escritorio.
+- Los contenedores que usan Grid o Flex excluyen los elementos de limpieza heredados de Bootstrap para evitar columnas vacías.
 
-### Opción 1: Con Python
-```bash
-# En la raíz del proyecto
-python -m http.server 8080
-```
-Luego abrir [http://localhost:8080](http://localhost:8080) en el navegador.
+`js/main.js` y `js/contact.js` usan JavaScript nativo. Las librerías antiguas permanecen en el repositorio, pero ya no se cargan. Los archivos Sass heredados tampoco generan la hoja de estilos actual.
 
-### Opción 2: Con Node.js (`npx serve`)
-```bash
-npx serve .
-```
+## Formulario
 
-### Opción 3: Con VS Code / Cursor
-Instalar la extensión **Live Server** y hacer clic en **"Go Live"** en la barra inferior.
+El formulario valida nombre, correo y mensaje. Al continuar prepara un enlace a WhatsApp con la consulta. El visitante confirma el envío en WhatsApp; la web no confirma la entrega del mensaje.
 
----
+El resultado incluye enlaces alternativos para abrir WhatsApp o un borrador en la aplicación de correo. Los campos se conservan. Si se modifica la consulta, se descarta el mensaje preparado para evitar enviar una versión anterior.
 
+## Recursos externos
 
-### Derechos de Autor
-Copyright © 2016 - 2026 **Arkyproyectos SAC**. Todos los derechos reservados.
+- Google Fonts para Manrope, con alternativa `sans-serif` si no carga.
+- Leaflet 1.9.4 desde unpkg, solo en Contacto.
+- Teselas de OpenStreetMap, con enlace directo de respaldo si falla el mapa.
+- WhatsApp y la aplicación de correo, únicamente al elegir esos canales.
+
+## Publicación
+
+Sube los HTML, `css`, `js`, `images`, `favicon.svg` y `favicon.ico` a un hosting estático. Se incluyen versiones en las URLs de los archivos CSS y JavaScript para renovar cachés.
+
+Configura el hosting para servir `404.html` ante rutas inexistentes y devolver el estado HTTP 404. El servidor de desarrollo de Python no hace esta asociación automáticamente. La página se puede revisar directamente en `/404.html`.
+
+Si cambia el dominio, actualiza los enlaces canónicos y las URLs de Open Graph en los HTML. Los textos de privacidad describen el comportamiento actual; deberán actualizarse si se añaden analítica, almacenamiento o nuevos proveedores.
+
+## Autoría
+
 Realizado por [CMaquera](http://cmaquera.com).
